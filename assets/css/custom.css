@@ -1,0 +1,24 @@
+/* makes it so the scrollbar doesn't shift content */
+:root {
+  scrollbar-gutter: stable;
+}
+
+/* makes posts on pagination look prettier */
+.post-list { list-style: none; margin: 1.2rem 0; padding: 0; }
+.post-item { padding: .65rem 0 1rem; border-bottom: 1px dashed #7cfc00; }
+
+.post-head { display: flex; align-items: baseline; gap: .6rem; }
+.post-bullet { color: #7cfc00; }
+.post-link { text-decoration: underline; font-size: 1.15rem; }
+.post-link:hover { text-decoration: none; }
+
+.post-date { margin-left: auto; color: #bfbfbf; }
+.post-excerpt { margin: .35rem 0 0; color: #c9c9c9; max-width: 60ch; }
+.pagination { display: flex; gap: 1rem; margin-top: 1.2rem; align-items: baseline; }
+.pager-link.is-disabled {
+  color: #777;            /* grey it out */
+  text-decoration: none;  /* remove underline */
+  pointer-events: none;   /* not clickable */
+  cursor: default;
+}
+.page-xofy { color: #9a9a9a; }
