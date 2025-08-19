@@ -8,4 +8,4 @@ vendor/
 
 # dev stuff
 .code-workspace
-.sh
+*.sh
