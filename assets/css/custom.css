@@ -26,6 +26,9 @@
 }
 .page-xofy { color: #9a9a9a; }
 
+.contact-link { text-decoration: underline; font-size: 1.15rem; }
+.contact-link:hover { text-decoration: none; }
+
 /* Header-only background */
 header {
   background: url("/assets/images/space.webp") no-repeat center center;
@@ -47,5 +50,18 @@ header h2 {
 }
 /* kill extra space the theme may give <nav> so rows line up */
 .index-footer .pagination { margin: 0; }
+
+
+/* unvisited */
+a {
+  color: #63c0f5; /* blue */
+  text-shadow: 0 0 5px rgba(104, 182, 255, 0.5);
+  text-decoration: underline;
+}
+
+/* visited */
+a:visited {
+  color: #9b59b6; /* purple */
+}
 
 
