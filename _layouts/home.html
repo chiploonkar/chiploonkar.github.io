@@ -5,23 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- preloads -->
-    <link rel="preload" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}"     as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <!-- CSS -->
+    <link rel="preload"
+          href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}"
+          as="style">
+    <link rel="stylesheet"
+          href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
 
-    <link rel="preload" href="{{ '/assets/css/custom.css?v=' | append: site.github.build_revision | relative_url }}"    as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="stylesheet" href="{{ '/assets/css/custom.css?v=' | append: site.github.build_revision | relative_url }}">
+    <link rel="preload"
+          href="{{ '/assets/css/custom.css?v=' | append: site.github.build_revision | relative_url }}"
+          as="style">
+    <link rel="stylesheet"
+          href="{{ '/assets/css/custom.css?v=' | append: site.github.build_revision | relative_url }}">
 
-    <link rel="preload" href="{{ '/assets/images/space.webp' | relative_url }}" as="image">
+    <!-- Background image for header -->
+    <link rel="preload"
+          href="{{ '/assets/images/space.webp' | relative_url }}"
+          as="image">
+    <link rel="preload"
+          href="{{ '/assets/images/bkg.png' | relative_url }}"
+          as="image">
 
-    <!-- if no JS fallback -->
-    <noscript>
-      <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-      <link rel="stylesheet" href="{{ '/assets/css/custom.css?v=' | append: site.github.build_revision | relative_url }}">
-    </noscript>
-    {% include head-custom.html %}
 
-{% seo %}
+  {% include head-custom.html %}
+  {% seo %}
   </head>
 
   <body>

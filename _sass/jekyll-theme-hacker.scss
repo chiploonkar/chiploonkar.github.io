@@ -14,8 +14,7 @@ $container-max-width: 1000px;
   }
 }
 
-// added html to fix mobile views
-html, body {
+body {
   margin: 0;
   padding: 0;
   background: $body-background url("../images/bkg.png") 0 0;
@@ -24,18 +23,6 @@ html, body {
   line-height: 1.5;
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
   min-height: 100%; // added this too
-}
-
-/* iOS: fill available height when the URL bar expands/collapses */
-html { height: -webkit-fill-available; }
-body {
-  min-height: 100vh;                 /* fallback */
-  min-height: -webkit-fill-available;/* iOS */
-}
-
-/* Modern browsers: use dynamic viewport to avoid gaps */
-@supports (height: 100dvh) {
-  body { min-height: 100dvh; }
 }
 
 /* General & 'Reset' Stuff */
