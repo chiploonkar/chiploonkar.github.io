@@ -6,7 +6,7 @@
   scrollbar-gutter: stable;
 }
 
-/* makes posts on pagination look prettier */
+/* paginaton CSS */
 .post-list { list-style: none; margin: 1.2rem 0; padding: 0; }
 .post-item { padding: .65rem 0 1rem; border-bottom: 1px dashed #b5e853; }
 
@@ -35,11 +35,6 @@ header {
 }
 header h2 {
   color: #eaeaea;
-}
-
-/* --- make links orange on hover --- */
-a:hover {
-  color: #f4bf75; /* your orange shade */
 }
 
 /* contact footer */
