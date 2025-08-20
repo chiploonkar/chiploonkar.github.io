@@ -22,8 +22,10 @@
 
 title: "prae's blog"
 description: tech, music, introspection et al.
+url: "https://blog.pranavchip.com"
 
 theme: jekyll-theme-hacker
+
 
 plugins:
   - jekyll-seo-tag
