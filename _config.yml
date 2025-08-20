@@ -22,7 +22,9 @@
 
 title: "prae's blog"
 description: tech, music, introspection et al.
+
 url: "https://blog.pranavchip.com"
+baseurl: ""
 
 theme: jekyll-theme-hacker
 
