@@ -17,22 +17,25 @@ title: home
   {% endfor %}
 </ul>
 
-<nav class="pagination">
-  {%- assign newer_href = paginator.previous_page_path | relative_url -%}
-  {%- assign older_href = paginator.next_page_path     | relative_url -%}
+<div class="index-footer">
+  <nav class="pagination">
+    {%- assign newer_href = paginator.previous_page_path | relative_url -%}
+    {%- assign older_href = paginator.next_page_path     | relative_url -%}
 
-  <a class="pager-link {% unless paginator.previous_page %}is-disabled{% endunless %}"
-     {% if paginator.previous_page %}href="{{ newer_href }}"{% else %}tabindex="-1" aria-disabled="true"{% endif %}>
-    << Newer
-  </a>
+    <a class="pager-link {% unless paginator.previous_page %}is-disabled{% endunless %}"
+      {% if paginator.previous_page %}href="{{ newer_href }}"{% else %}tabindex="-1" aria-disabled="true"{% endif %}>
+      <<
+    </a>
 
-  <span class="page-xofy">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+    <span class="page-xofy">{{ paginator.page }} / {{ paginator.total_pages }}</span>
 
-  <a class="pager-link {% unless paginator.next_page %}is-disabled{% endunless %}"
-     {% if paginator.next_page %}href="{{ older_href }}"{% else %}tabindex="-1" aria-disabled="true"{% endif %}>
-    Older >>
-  </a>
-</nav>
+    <a class="pager-link {% unless paginator.next_page %}is-disabled{% endunless %}"
+      {% if paginator.next_page %}href="{{ older_href }}"{% else %}tabindex="-1" aria-disabled="true"{% endif %}>
+      >>
+    </a>
+  </nav>
+  <a class="contact-link" href="{{ '/contact/' | relative_url }}">contact</a>
+</div>
 
 
 

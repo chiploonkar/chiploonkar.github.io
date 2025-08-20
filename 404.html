@@ -4,115 +4,46 @@ title: 404
 permalink: /404.html
 ---
 
-<style type="text/css" media="screen">
-  :root {
-    --bg: #0b0c0b;
-    --fg: #d7dad7;
-    --muted: #9aa09a;
-    --accent: #b6ff2e; /* neon lime */
-  }
-
-  /* base */
-  html, body {
-    height: 100%;
-  }
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--fg);
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    /* subtle noise */
-    background-image:
-      radial-gradient(transparent 0, transparent 1px, rgba(255,255,255,0.015) 1px),
-      radial-gradient(transparent 0, transparent 1px, rgba(255,255,255,0.01) 1px);
-    background-size: 3px 3px, 5px 5px;
-    background-position: 0 0, 1px 1px;
-  }
-
-  /* center stage */
-  .container {
+<style>
+  #nf {
+    --accent: #b5e853;
     max-width: 720px;
     margin: 12vh auto 0;
     padding: 0 1.25rem;
     text-align: center;
   }
 
-  /* headline */
-  h1 {
-    color: var(--accent);
-    margin: 0 0 .25rem 0;
+  #nf .nf-404 {
     font-size: clamp(40px, 8vw, 64px);
-    letter-spacing: -0.02em;
+    font-weight: 700;
+    color: var(--accent);
+    margin: 0 0 .25rem;
     line-height: 1.1;
+    letter-spacing: -0.02em;
   }
 
-  /* thin rule, no glow */
-  .rule {
-    width: 180px;
-    height: 1px;
-    margin: .6rem auto 1.2rem;
+  #nf .nf-rule {
+    width: 180px; height: 1px; margin: .6rem auto 1.2rem;
     background: linear-gradient(90deg, transparent, var(--accent), transparent);
     opacity: .6;
   }
 
-  /* copy */
-  .lead {
-    font-weight: 600;
-    color: var(--fg);
-    margin: 0 0 .4rem;
-  }
-  .muted {
-    color: var(--muted);
-    margin: 0 0 1.2rem;
-  }
+  #nf .nf-lead { margin: 0 0 .4rem; font-weight: 600; }
+  #nf .nf-sub  { margin: 0 0 1.2rem; opacity: .8; }
 
-  /* action links */
-  .actions {
-    display: inline-flex;
-    gap: 1rem;
-  }
-  .actions a {
+  #nf .nf-home {
     color: var(--accent);
     text-decoration: none;
     border-bottom: 1px dotted rgba(182,255,46,.35);
     padding-bottom: 2px;
   }
-  .actions a:hover {
-    border-bottom-color: var(--accent);
-  }
-
-  /* optional ultra-subtle CRT scanlines (reduced motion safe) */
-  .scan {
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    background: repeating-linear-gradient(
-      to bottom,
-      rgba(255,255,255,0.03) 0,
-      rgba(255,255,255,0.03) 1px,
-      transparent 2px,
-      transparent 3px
-    );
-    mix-blend-mode: soft-light;
-    opacity: .05;
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .scan { display: none; }
-  }
+  #nf .nf-home:hover { border-bottom-color: var(--accent); }
 </style>
 
-<div class="container">
-  <h1>404</h1>
-  <div class="rule"></div>
-
-  <p class="lead">page not found</p>
-  <p class="muted">you jacked into a dead route choom. only black ICE lies ahead.</p>
-
-  <div class="actions">
-    <a href="{{ '/' | relative_url }}">← cd /home/</a>
-  </div>
-</div>
-
-<div class="scan" aria-hidden="true"></div>
+<section id="nf" aria-labelledby="nf-title">
+  <h1 id="nf-title" class="nf-404">404</h1>
+  <div class="nf-rule" aria-hidden="true"></div>
+  <p class="nf-lead">page not found</p>
+  <p class="nf-sub">you jacked into a dead route, choom.</p>
+  <a class="nf-home" href="{{ '/' | relative_url }}">← cd /home/</a>
+</section>
