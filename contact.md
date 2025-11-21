@@ -7,8 +7,8 @@ permalink: /contact/
 ## > contact.txt
 ```bash
 $ discord --user praetor29
+$ email   --addr mail@pranavchip.com
 $ github  --link github.com/chiploonkar
-$ email   --addr pranavchip@gmail.com
 ```
 
 ## > pfp_evolution.db
